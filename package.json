@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test-net": "testrpc --network development -l 990000000000000 -u 0 -u 1 -u 2 -u 3",
+    "ropsten": "testrpc --network ropsten -l 990000000000000 -u 0 -u 1 -u 2 -u 3 --gas 5555555555",
+    "remix": "remixd -S /home/dev/smart/test/contracts",
+    "tm": "rm -rf ./build && truffle migrate --reset",
+    "mr": "truffle migrate --reset --network ropsten",
+    "ganache": "ganache-cli -u 0 -s someseed -l 990000000000000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "ethereumjs-wallet": "^0.6.0",
+    "truffle-contract": "^3.0.1",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^1.0.0-beta.26",
+    "zeppelin-solidity": "^1.6.0",
+    "ganache-cli": "^6.0.3"
+  }
+}
